@@ -5,6 +5,9 @@ const app = express();
 
 connectDB(); //Connect Database
 
+// Init Middlware(for req.body)
+app.use(express.json({ extended: false }));
+
 app.get('/', (req, res) => res.send('API Running'))
 
 //Define Routes
